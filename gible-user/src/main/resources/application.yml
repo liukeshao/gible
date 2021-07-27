@@ -6,11 +6,7 @@ spring:
       host: localhost
       port: 8500
       discovery:
-        tags: dev
-        serviceName: gible-user
-        healthCheckPath: /actuator/health
-        healthCheckInterval: 15s
-        register: true
+        enabled: true
 
 server:
   port: 8899

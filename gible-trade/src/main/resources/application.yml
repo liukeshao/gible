@@ -7,9 +7,7 @@ spring:
     consul:
       host: localhost
       port: 8500
-      discovery:
-        tags: dev
-        serviceName: gible-trade
-        healthCheckPath: /actuator/health
-        healthCheckInterval: 15s
-        register: true
+
+logging:
+  level:
+    feign: debug
