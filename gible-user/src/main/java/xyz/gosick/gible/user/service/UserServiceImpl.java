@@ -1,9 +1,14 @@
 package xyz.gosick.gible.user.service;
 
-import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RestController;
+import xyz.gosick.gible.user.api.UserApi;
 
-@Service
-public class UserServiceImpl {
+@RestController
+public class UserServiceImpl implements UserApi {
 
 
+	@Override
+	public String getById(long id) {
+		return "null";
+	}
 }

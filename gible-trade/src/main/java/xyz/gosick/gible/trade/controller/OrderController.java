@@ -12,9 +12,10 @@ import javax.annotation.Resource;
 public class OrderController {
 	@Resource
 	private UserClient userClient;
+
 	@GetMapping("/test")
 	public void test() {
-		var user = userClient.getById(2019L);
+		String user = userClient.getById(1);
 		System.out.println(user);
 	}
 }

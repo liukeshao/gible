@@ -1,7 +1,16 @@
+spring:
+  application:
+    name: gible-user
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        tags: dev
+        serviceName: gible-user
+        healthCheckPath: /actuator/health
+        healthCheckInterval: 15s
+        register: true
+
 server:
   port: 8899
-spring:
-  cloud:
-    nacos:
-      discovery:
-        server-addr: 127.0.0.1:8848

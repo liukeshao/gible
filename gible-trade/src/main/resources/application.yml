@@ -1,7 +1,15 @@
 server:
   port: 8890
 spring:
+  application:
+    name: gible-trade
   cloud:
-    nacos:
+    consul:
+      host: localhost
+      port: 8500
       discovery:
-        server-addr: 127.0.0.1:8848
+        tags: dev
+        serviceName: gible-trade
+        healthCheckPath: /actuator/health
+        healthCheckInterval: 15s
+        register: true
