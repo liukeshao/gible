@@ -7,3 +7,7 @@ spring:
     consul:
       host: localhost
       port: 8500
+
+management:
+  server:
+    port: 4453
