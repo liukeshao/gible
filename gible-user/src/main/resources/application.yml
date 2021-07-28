@@ -14,3 +14,16 @@ server:
 management:
   server:
     port: 4452
+
+feign:
+  circuitbreaker:
+    enabled: true
+
+resilience4j.ratelimiter:
+  instances:
+    user:
+      limitForPeriod: 5
+      limitRefreshPeriod: 1s
+      timeoutDuration: 0
+      registerHealthIndicator: true
+      eventConsumerBufferSize: 100

@@ -7,6 +7,9 @@ spring:
     consul:
       host: localhost
       port: 8500
+feign:
+  circuitbreaker:
+    enabled: true
 
 management:
   server:
